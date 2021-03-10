@@ -21,9 +21,10 @@ public class MainActivity extends AppCompatActivity {
 
 
         Button btn_start = (Button) findViewById(R.id.btn_start);
+        Chronometer chronometer =(Chronometer) findViewById(R.id.chronometer);
         btn_start.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                titre.setText("button start");
+                chronometer.start();
 
 
             }
@@ -31,11 +32,10 @@ public class MainActivity extends AppCompatActivity {
         Button btn_stop =(Button) findViewById(R.id.btn_stop);
         btn_stop.setOnClickListener(new View.OnClickListener() {
              public void onClick(View v){
-                titre.setText("button stop");
+                 chronometer.stop();
             }
             });
-        Chronometer chronometer =(Chronometer) findViewById(R.id.chronometer);
-        chronometer.start();
+
 
 
 
