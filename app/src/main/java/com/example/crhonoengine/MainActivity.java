@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        TextView time0 =(TextView) findViewById(R.id.time0);
+
 
         TextView titre = (TextView) findViewById(R.id.nom);
         titre.setText("hello");
@@ -35,9 +35,10 @@ public class MainActivity extends AppCompatActivity {
              public void onClick(View v){
                  chronometer.stop();
                  chronometer.setBase(SystemClock.elapsedRealtime());
-
+                 chronometer.getBase();
              }
         });
+        TextView time0 =(TextView) findViewById(R.id.time0);
 
 
 
