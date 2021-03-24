@@ -6,55 +6,47 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-
-    <Button
-        android:id="@+id/btn_stop"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Arrêt"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.789"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.809"
-        tools:ignore="MissingConstraints" />
-
-    <Button
-        android:id="@+id/btn_start"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Lancer"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btn_stop"
-        app:layout_constraintHorizontal_bias="0.429"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.821"
-        tools:ignore="MissingConstraints" />
-
-    <Button
-        android:id="@+id/btn_restart"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="restart"
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="215dp"
+        android:layout_height="43dp"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.879"
-        tools:ignore="MissingConstraints"/>
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/btn_start"
+            android:layout_width="113dp"
+            android:layout_height="wrap_content"
+            android:text="Lancer"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.392"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.522"
+            tools:ignore="MissingConstraints" />
+
+        <Button
+            android:id="@+id/btn_stop"
+            android:layout_width="108dp"
+            android:layout_height="wrap_content"
+            android:text="Arrêt"
+            tools:ignore="MissingConstraints" />
+
+    </LinearLayout>
 
     <Chronometer
         android:id="@+id/chronometer"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="76dp"
+        android:layout_height="53dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.445"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.672" />
+        app:layout_constraintVertical_bias="0.379" />
 
     <TextView
         android:id="@+id/nom"
@@ -67,6 +59,71 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.054" />
+
+    <LinearLayout
+        android:layout_width="284dp"
+        android:layout_height="51dp"
+        android:orientation="horizontal"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="52dp"
+        tools:layout_editor_absoluteY="509dp">
+
+
+        <TextView
+            android:id="@+id/txt_time0"
+            android:layout_width="165dp"
+            android:layout_height="match_parent"
+            android:text="Valeurs avant lancement" />
+
+        <TextView
+            android:id="@+id/time0"
+            android:layout_width="112dp"
+            android:layout_height="match_parent"
+            android:text="xxxx" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="287dp"
+        android:layout_height="49dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.419"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.821">
+
+        <TextView
+            android:id="@+id/time1"
+            android:layout_width="165dp"
+            android:layout_height="match_parent"
+            android:text="Valeurs ajouter"
+
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="289dp"
+        android:layout_height="37dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.426"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.877">
+
+
+        <TextView
+            android:id="@+id/time2"
+            android:layout_width="166dp"
+            android:layout_height="match_parent"
+            android:text="temps d'utilisation"
+
+            />
+    </LinearLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

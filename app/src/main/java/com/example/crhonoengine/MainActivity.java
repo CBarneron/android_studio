@@ -15,9 +15,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        TextView time0 =(TextView) findViewById(R.id.time0);
 
         TextView titre = (TextView) findViewById(R.id.nom);
-        titre.setText(" hello");
+        titre.setText("hello");
 
 
         Button btn_start = (Button) findViewById(R.id.btn_start);
@@ -25,23 +26,20 @@ public class MainActivity extends AppCompatActivity {
         btn_start.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 chronometer.start();
-
-
+                chronometer.setBase(SystemClock.elapsedRealtime());
             }
         });
+
         Button btn_stop =(Button) findViewById(R.id.btn_stop);
         btn_stop.setOnClickListener(new View.OnClickListener() {
              public void onClick(View v){
                  chronometer.stop();
-            }
-            });
-        Button btn_restart=(Button) findViewById(R.id.btn_restart);
-        btn_restart.setOnClickListener(new View.OnClickListener() {
+                 chronometer.setBase(SystemClock.elapsedRealtime());
 
-            public void onClick(View v) {
-               chronometer.setBase(SystemClock.elapsedRealtime());
-            }
+             }
         });
+
+
 
 
     }
