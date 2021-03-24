@@ -1,13 +1,13 @@
 package com.example.crhonoengine;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.content.Context;
 import android.os.Bundle;
+import android.os.SystemClock;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Chronometer;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -35,10 +35,13 @@ public class MainActivity extends AppCompatActivity {
                  chronometer.stop();
             }
             });
+        Button btn_restart=(Button) findViewById(R.id.btn_restart);
+        btn_restart.setOnClickListener(new View.OnClickListener() {
 
-
-
-
+            public void onClick(View v) {
+               chronometer.setBase(SystemClock.elapsedRealtime());
+            }
+        });
 
 
     }
