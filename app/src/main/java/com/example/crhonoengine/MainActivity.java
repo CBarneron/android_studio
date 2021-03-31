@@ -25,21 +25,24 @@ public class MainActivity extends AppCompatActivity {
         Chronometer chronometer =(Chronometer) findViewById(R.id.chronometer);
         btn_start.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+		chronometer.setBase(SystemClock.elapsedRealtime());
                 chronometer.start();
-                chronometer.setBase(SystemClock.elapsedRealtime());
+                
             }
         });
 
         Button btn_stop =(Button) findViewById(R.id.btn_stop);
         btn_stop.setOnClickListener(new View.OnClickListener() {
              public void onClick(View v){
-                 chronometer.stop();
-                 chronometer.setBase(SystemClock.elapsedRealtime());
-                 chronometer.getBase();
+                 chronometer.stop();  
+		             
+               	long time = SystemClock.elapsedRealtime()- chronometer.getBase();
+		TextView time0 =(TextView) findViewById(R.id.time0);
+		time0.setText(Long.toString(time));
+
              }
         });
-        TextView time0 =(TextView) findViewById(R.id.time0);
-
+        
 
 
 
