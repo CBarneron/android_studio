@@ -34,11 +34,14 @@ public class MainActivity extends AppCompatActivity {
         Button btn_stop =(Button) findViewById(R.id.btn_stop);
         btn_stop.setOnClickListener(new View.OnClickListener() {
              public void onClick(View v){
-                 chronometer.stop();  
-		             
+                 chronometer.stop();
                	long time = SystemClock.elapsedRealtime()- chronometer.getBase();
 		TextView time0 =(TextView) findViewById(R.id.time0);
 		time0.setText(Long.toString(time));
+
+                 long Time = time + chronometer.getBase();
+                 TextView time1 =(TextView) findViewById(R.id.time1);
+                 time1.setText(Long.toString(Time));
 
              }
         });
