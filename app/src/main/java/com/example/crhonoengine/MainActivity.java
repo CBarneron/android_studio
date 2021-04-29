@@ -26,8 +26,6 @@ public class MainActivity extends AppCompatActivity {
 			public void onClick(View v) {
 				chronometer.setBase(SystemClock.elapsedRealtime());
 				chronometer.start();
-
-
 			}
 		});
 
@@ -56,12 +54,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 		});
-		final EditText inputText = (EditText) findViewById(R.id.txt_engine);
-		inputText.setOnEditorActionListener(new TextView.OnEditorActionListener() {
-			public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
-				return false;
-			}
-		});
+
 
 
 	}

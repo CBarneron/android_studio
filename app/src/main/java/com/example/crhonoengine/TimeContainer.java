@@ -19,6 +19,10 @@ public class TimeContainer {
 
 		mtime = mtime + value;
 	}
+
+
+
+
 	public void timerfin(long value){
 		timer= mtime;
 	}
