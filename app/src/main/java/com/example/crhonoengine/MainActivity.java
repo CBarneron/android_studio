@@ -3,8 +3,10 @@ package com.example.crhonoengine;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.SystemClock;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
+import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
 import android.widget.Chronometer;
 import android.widget.EditText;
@@ -54,6 +56,17 @@ public class MainActivity extends AppCompatActivity {
 
 
 		});
+		final  EditText inputText = (EditText)findViewById(R.id.txt_engine);
+		inputText.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+			@Override
+			public boolean onEditorAction(TextView  textView, int actionId, KeyEvent event) {
+				if (actionId == EditorInfo.IME_ACTION_DONE){
+					Log.d("Test","#####\n"+textView.getText()+"\n");
+				}
+				return false;
+			}
+		});
+
 
 
 

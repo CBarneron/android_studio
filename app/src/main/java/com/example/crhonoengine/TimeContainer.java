@@ -23,9 +23,7 @@ public class TimeContainer {
 
 
 
-	public void timerfin(long value){
-		timer= mtime;
-	}
+
 
 
 }

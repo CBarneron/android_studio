@@ -27,5 +27,15 @@ public class accueil extends AppCompatActivity {
 
 			;
 		});
+		Button btn_time =(Button) findViewById(R.id.btn_time);
+		btn_time.setOnClickListener(new View.OnClickListener() {
+			public void onClick(View v) {
+
+				Intent Timer =new Intent(accueil.this, timer.class);
+				startActivity(Timer);
+			}
+
+
+		});
 	}
 }
